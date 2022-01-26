@@ -6,7 +6,6 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
-        "doctrine/dbal": "^3.3",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.75",
@@ -14,18 +13,13 @@
         "laravel/tinker": "^2.5"
     },
     "require-dev": {
-        "bamarni/composer-bin-plugin": "^1.4",
         "barryvdh/laravel-debugbar": "^3.6",
-        "barryvdh/laravel-ide-helper": "^2.12",
-        "beyondcode/laravel-dump-server": "^1.7",
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
         "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^5.10",
-        "phpunit/phpunit": "^9.5.10",
-        "roave/security-advisories": "dev-master",
-        "ucan-lab/laravel-dacapo": "^4.1"
+        "phpunit/phpunit": "^9.5.10"
     },
     "autoload": {
         "psr-4": {
