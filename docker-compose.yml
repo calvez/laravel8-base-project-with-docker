@@ -2,6 +2,8 @@ version: "3.9"
 volumes:
   php-fpm-socket:
   db-store:
+  vendor-store: # add
+  node_modules-store: # add    
   psysh-store:
 services:
   app:
@@ -21,7 +23,7 @@ services:
         source: psysh-store
         target: /root/.config/psysh
         volume:
-          nocopy: true
+          nocopy: true      
     environment:
       - DB_CONNECTION=mysql
       - DB_HOST=db
@@ -59,11 +61,7 @@ services:
         protocol: tcp
         mode: host
     volumes:
-      - type: volume
-        source: db-store
-        target: /var/lib/mysql
-        volume:
-          nocopy: true
+      - db-store:/var/lib/mysql
     environment:
       - MYSQL_DATABASE=${DB_NAME:-laravel_local}
       - MYSQL_USER=${DB_USER:-phper}
